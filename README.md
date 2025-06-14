@@ -52,3 +52,10 @@ git commit -m "Add initial Unity project"
 このリポジトリには Unity 2023 向けの簡易的な 3D FPS プロジェクトの雛形が含まれています。
 `Assets/Scenes/Main.unity` を開き、`Assets/Scripts` 以下の C# スクリプトを編集してゲームを拡張してください。
 Visual Studio Code を使用する場合は `.vscode/extensions.json` の推奨拡張機能をインストールすると便利です。
+
+## 8. プレイアブルな森林シーン
+`ForestGenerator` スクリプトをシーン内の空オブジェクトに追加すると、起動時にランダム配置された簡易的な木が生成されます。`GunController` には弾丸プレハブが設定されていなくても動作するよう、デフォルトの球体弾を生成する処理を追加しました。Unity で `Main.unity` を開き、以下の手順で FPS をプレイできます。
+
+1. シーンに `Player` オブジェクトを配置し `PlayerController` と `GunController` をアタッチします。`Fire Point` 用の空オブジェクトを子として作成し、`GunController` の `firePoint` に指定します。
+2. 空の `Environment` オブジェクトを作成し、`ForestGenerator` をアタッチします。`treeCount` や `areaSize` を調整すると森の規模を変更できます。
+3. `Play` ボタンを押すとキャラクターを操作して森林を歩き回り、`Fire1` (左クリック) で弾を発射できます。

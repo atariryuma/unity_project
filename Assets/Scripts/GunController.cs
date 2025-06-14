@@ -16,8 +16,23 @@ public class GunController : MonoBehaviour
 
     void Shoot()
     {
-        if (bulletPrefab == null || firePoint == null) return;
-        var bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if (firePoint == null) return;
+
+        GameObject bullet;
+        if (bulletPrefab != null)
+        {
+            bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
+        else
+        {
+            bullet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            bullet.transform.position = firePoint.position;
+            bullet.transform.rotation = firePoint.rotation;
+            bullet.transform.localScale = Vector3.one * 0.1f;
+            bullet.AddComponent<Rigidbody>();
+            bullet.AddComponent<Bullet>();
+        }
+
         var rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
         {
