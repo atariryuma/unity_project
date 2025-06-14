@@ -47,3 +47,8 @@ git commit -m "Add initial Unity project"
 - [Unity マニュアル](https://docs.unity3d.com/ja/current/Manual/)
 
 以上で 3D ゲーム開発を始めるための環境構築は完了です。
+
+## 7. このリポジトリについて
+このリポジトリには Unity 2023 向けの簡易的な 3D FPS プロジェクトの雛形が含まれています。
+`Assets/Scenes/Main.unity` を開き、`Assets/Scripts` 以下の C# スクリプトを編集してゲームを拡張してください。
+Visual Studio Code を使用する場合は `.vscode/extensions.json` の推奨拡張機能をインストールすると便利です。
