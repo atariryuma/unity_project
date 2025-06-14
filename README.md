@@ -59,3 +59,10 @@ Visual Studio Code を使用する場合は `.vscode/extensions.json` の推奨�
 1. シーンに `Player` オブジェクトを配置し `PlayerController` と `GunController` をアタッチします。`Fire Point` 用の空オブジェクトを子として作成し、`GunController` の `firePoint` に指定します。
 2. 空の `Environment` オブジェクトを作成し、`ForestGenerator` をアタッチします。`treeCount` や `areaSize` を調整すると森の規模を変更できます。
 3. `Play` ボタンを押すとキャラクターを操作して森林を歩き回り、`Fire1` (左クリック) で弾を発射できます。
+
+## 9. 敵キャラクターの追加
+`EnemyController` スクリプトを利用すると、プレイヤーを追いかける簡易的な敵を配置できます。
+
+1. シーンにカプセルなどのオブジェクトを作成し `EnemyController` をアタッチします。
+2. オブジェクトに `CharacterController` コンポーネントを追加します。
+3. `Speed` や `DetectionRange` を調整して挙動を確認してください。
