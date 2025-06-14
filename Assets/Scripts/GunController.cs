@@ -26,6 +26,7 @@ public class GunController : MonoBehaviour
         else
         {
             bullet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            bullet.name = "Bullet";
             bullet.transform.position = firePoint.position;
             bullet.transform.rotation = firePoint.rotation;
             bullet.transform.localScale = Vector3.one * 0.1f;
